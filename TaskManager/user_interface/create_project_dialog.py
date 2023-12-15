@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QDialog, QHBoxLayout, QComboBox, QLineEdit, QLabel, QPushButton, QVBoxLayout, QListWidget, QListWidgetItem
-from logic.database_manager import DatabaseManager
+from TaskManager.logic.database_manager import DatabaseManager
 
 class CreateProjectWindow(QDialog):
     def __init__(self):

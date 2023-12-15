@@ -1,8 +1,8 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, QGridLayout, QMessageBox
 from PyQt6.QtCore import Qt
-from user_interface import projects_list_window
-from logic import database_manager
+from TaskManager.user_interface import projects_list_window
+from TaskManager.logic import database_manager
 
 class AuthorizationWindow(QWidget):
 

@@ -3,10 +3,10 @@ from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QVBoxLayout, QHBoxLayout,
     QLabel, QListWidget, QListWidgetItem, QWidget, QPushButton, QDialog
 )
-from user_interface.add_task_dialog import AddTaskDialog
-from user_interface.task_details_dialog import TaskDetailsDialog
-from user_interface import projects_list_window
-from logic.database_manager import DatabaseManager
+from TaskManager.user_interface.add_task_dialog import AddTaskDialog
+from TaskManager.user_interface.task_details_dialog import TaskDetailsDialog
+from TaskManager.user_interface import projects_list_window
+from TaskManager.logic.database_manager import DatabaseManager
 from PyQt6.QtCore import Qt, QMimeData, QByteArray, QDataStream
 import sys
 
@@ -156,7 +156,7 @@ class TrelloDashboard(QMainWindow):
                 # Use a default list (e.g., the first list) if the status is not found
                 target_list = self.lists[0][1]
 
-            item = QListWidgetItem(task_name)
+            item = QListWidgetItem(str(task_name))
             item.setData(Qt.ItemDataRole.UserRole, task_id)  # Set task ID as user data
             target_list.addItem(item)
 

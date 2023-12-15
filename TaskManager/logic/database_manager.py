@@ -128,15 +128,13 @@ class DatabaseManager:
 
     def get_all_tasks_for_project(self, project_id):
         query = """
-            SELECT tasks.task_id, tasks.description, project_tasks.status
+            SELECT tasks.task_id, tasks.task_name, project_tasks.status
             FROM project_tasks
             JOIN tasks ON project_tasks.task_id = tasks.task_id
             WHERE project_tasks.project_id = ?
         """
         params = (project_id,)
-        print("Executing query:", query, "with params:", params)
         tasks = self.execute_query(query, params)
-        print("Tasks for project:", tasks)
         return tasks
 
     def get_task_status(self, task_id, project_name):

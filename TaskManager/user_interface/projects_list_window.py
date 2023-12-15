@@ -1,9 +1,9 @@
 from PyQt6.QtWidgets import QWidget, QDialog, QLabel, QPushButton, QVBoxLayout, QGridLayout, QApplication, QListWidget, QListWidgetItem
 from PyQt6.QtCore import Qt
-from user_interface import authorization_window
-from user_interface.create_project_dialog import CreateProjectWindow
-from user_interface.project_dashboard_window import TrelloDashboard
-from logic.database_manager import DatabaseManager
+from TaskManager.user_interface import authorization_window
+from TaskManager.user_interface.create_project_dialog import CreateProjectWindow
+from TaskManager.user_interface.project_dashboard_window import TrelloDashboard
+from TaskManager.logic.database_manager import DatabaseManager
 
 import sys
 
